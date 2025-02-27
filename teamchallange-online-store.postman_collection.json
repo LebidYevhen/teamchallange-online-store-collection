@@ -132,6 +132,65 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Users (paginated)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BASE_URL}}{{REST_API_URL}}/users?per_page=15&page=1",
+							"host": [
+								"{{BASE_URL}}{{REST_API_URL}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "15"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users (all)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}{{REST_API_URL}}/users/all",
+							"host": [
+								"{{BASE_URL}}{{REST_API_URL}}"
+							],
+							"path": [
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
